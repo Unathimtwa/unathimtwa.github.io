@@ -3,61 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unathi Mtwa | Data Engineer & Data Scientist</title>
+  <title>[Your Name] | Data Engineer & Data Scientist</title>
   <style>
+    :root {
+      --bg-color: #3b3c36;
+      --accent-color: #8cc63f;
+      --text-color: #f4f4f4;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      background: var(--bg-color);
+      color: var(--text-color);
     }
-    header, nav, main, footer {
-      max-width: 800px;
-      margin: auto;
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    nav {
+      background-color: #2e2f28;
       padding: 1rem;
+      text-align: center;
     }
+
     nav a {
+      color: var(--text-color);
       margin: 0 1rem;
+      text-transform: uppercase;
       text-decoration: none;
-      color: #007acc;
+      font-weight: bold;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      color: var(--accent-color);
     }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
     section {
-      margin: 2rem 0;
+      margin: 3rem 0;
     }
-    .project {
-      border-left: 4px solid #007acc;
+
+    h2 {
+      border-left: 4px solid var(--accent-color);
       padding-left: 1rem;
-      margin-bottom: 1rem;
+      color: var(--accent-color);
     }
+
+    .project {
+      background-color: #2e2f28;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .project h4 {
+      margin-top: 0;
+      color: var(--accent-color);
+    }
+
+    a {
+      color: var(--accent-color);
+    }
+
     form input, form textarea, form button {
       display: block;
       width: 100%;
       margin-bottom: 1rem;
-      padding: 0.5rem;
+      padding: 0.75rem;
       font-size: 1rem;
+      border: none;
+      border-radius: 4px;
     }
+
+    form input, form textarea {
+      background: #444;
+      color: #fff;
+    }
+
+    form button {
+      background-color: var(--accent-color);
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #a3d64c;
+    }
+
     footer {
       text-align: center;
-      font-size: 0.9rem;
-      color: #888;
+      padding: 1rem;
+      background-color: #2e2f28;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>[Your Name]</h1>
-    <p>Data Engineer | Data Scientist</p>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Hi, I am Unathi Mtwa</h1>
+    <p>Data Engineer & Data Scientist | Data pipelines, Scalable Solutions</p>
   </header>
+
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <main>
     <section id="projects">
@@ -75,6 +147,7 @@
         <h4>Project Title 3</h4>
         <p>Brief description of the project. Tools used: [Tool1, Tool2]. <a href="#">GitHub Link</a></p>
       </div>
+
       <h3>Data Science</h3>
       <div class="project">
         <h4>Project Title 4</h4>
