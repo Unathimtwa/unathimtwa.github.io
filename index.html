@@ -6,177 +6,91 @@
   <title>[Your Name] | Data Engineer & Data Scientist</title>
   <style>
     :root {
-      --bg-color: #3b3c36;
-      --accent-color: #8cc63f;
-      --text-color: #f4f4f4;
+      --primary-color: #1a0033;
+      --accent-color: #ffffff;
+      --highlight-color: #8cc63f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg-color);
-      color: var(--text-color);
+      background: var(--primary-color);
+      color: var(--accent-color);
     }
 
-    header {
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 3rem 1rem;
-      background: rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #1a0033, #32004b);
+      background-size: cover;
+      position: relative;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      opacity: 0.05;
+      z-index: 1;
     }
 
-    header p {
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+
+    .hero p {
       font-size: 1.2rem;
       color: #ccc;
+      margin: 1rem 0 2rem;
     }
 
-    nav {
-      background-color: #2e2f28;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: var(--text-color);
-      margin: 0 1rem;
-      text-transform: uppercase;
-      text-decoration: none;
+    .hero .cta-button {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
       font-weight: bold;
-    }
-
-    nav a:hover {
-      color: var(--accent-color);
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    section {
-      margin: 3rem 0;
-    }
-
-    h2 {
-      border-left: 4px solid var(--accent-color);
-      padding-left: 1rem;
-      color: var(--accent-color);
-    }
-
-    .project {
-      background-color: #2e2f28;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid var(--accent-color);
-    }
-
-    .project h4 {
-      margin-top: 0;
-      color: var(--accent-color);
-    }
-
-    a {
-      color: var(--accent-color);
-    }
-
-    form input, form textarea, form button {
-      display: block;
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.75rem;
       font-size: 1rem;
-      border: none;
       border-radius: 4px;
-    }
-
-    form input, form textarea {
-      background: #444;
-      color: #fff;
-    }
-
-    form button {
-      background-color: var(--accent-color);
-      color: #000;
-      font-weight: bold;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    form button:hover {
-      background-color: #a3d64c;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #2e2f28;
-      color: #aaa;
+    .hero .cta-button:hover {
+      background: var(--accent-color);
+      color: var(--primary-color);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Hi, I am Unathi Mtwa</h1>
-    <p>Data Engineer & Data Scientist | Data pipelines, Scalable Solutions</p>
-  </header>
-
-  <nav>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <section id="projects">
-      <h2>Projects</h2>
-      <h3>Data Engineering</h3>
-      <div class="project">
-        <h4>Project Title 1</h4>
-        <p>Brief description of the project. Tools used: [Tool1, Tool2]. <a href="#">GitHub Link</a></p>
-      </div>
-      <div class="project">
-        <h4>Project Title 2</h4>
-        <p>Brief description of the project. Tools used: [Tool1, Tool2]. <a href="#">GitHub Link</a></p>
-      </div>
-      <div class="project">
-        <h4>Project Title 3</h4>
-        <p>Brief description of the project. Tools used: [Tool1, Tool2]. <a href="#">GitHub Link</a></p>
-      </div>
-
-      <h3>Data Science</h3>
-      <div class="project">
-        <h4>Project Title 4</h4>
-        <p>Brief description of the project. Models used: [Model1, Model2]. <a href="#">GitHub Link</a></p>
-      </div>
-      <div class="project">
-        <h4>Project Title 5</h4>
-        <p>Brief description of the project. Models used: [Model1, Model2]. <a href="#">GitHub Link</a></p>
-      </div>
-    </section>
-
-    <section id="cv">
-      <h2>CV</h2>
-      <p>You can view or download my CV <a href="assets/files/your_cv.pdf" target="_blank">here</a>.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/yourFormID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-  </footer>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>[Your Name]</h1>
+      <p>Data Engineer & Data Scientist</p>
+      <a href="#contact">
+        <button class="cta-button">Book a Chat</button>
+      </a>
+    </div>
+  </section>
 </body>
 </html>
