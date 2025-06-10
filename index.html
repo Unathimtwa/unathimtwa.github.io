@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
   <title>UNATHI MTWA | Data Engineer & Data Scientist</title>
   <style>
     :root {
@@ -64,7 +64,7 @@
       margin: 1rem 0 2rem;
     }
 
-    .hero .cta-button {
+    .cta-button {
       padding: 0.75rem 1.5rem;
       background: transparent;
       border: 2px solid var(--accent-color);
@@ -76,20 +76,86 @@
       transition: all 0.3s ease;
     }
 
-    .hero .cta-button:hover {
+    .cta-button:hover {
       background: var(--accent-color);
       color: var(--primary-color);
+    }
+
+    /* --- Projects Section --- */
+    .projects {
+      padding: 4rem 2rem;
+      background: #250040;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--highlight-color);
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project {
+      background: #32004b;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #444;
+    }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>[Your Name]</h1>
+      <h1>Unathi Mtwa</h1>
       <p>Data Engineer & Data Scientist</p>
       <a href="#contact">
         <button class="cta-button">Book a Chat</button>
       </a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>ETL Pipeline with Airflow</h3>
+        <p>Automated data ingestion and transformation pipeline using Apache Airflow and PostgreSQL.</p>
+      </div>
+      <div class="project">
+        <h3>Data Lake with Spark</h3>
+        <p>Built a data lake on AWS S3 with Spark for real-time analytics on large datasets.</p>
+      </div>
+      <div class="project">
+        <h3>Snowflake + dbt Modeling</h3>
+        <p>Developed modular data models and documentation using dbt on Snowflake.</p>
+      </div>
+      <div class="project">
+        <h3>Predictive Maintenance</h3>
+        <p>Machine learning model to predict equipment failures in industrial systems.</p>
+      </div>
+      <div class="project">
+        <h3>Customer Churn Analysis</h3>
+        <p>Analyzed customer behavior to forecast churn using Python, Pandas, and Scikit-learn.</p>
+      </div>
     </div>
   </section>
 </body>
